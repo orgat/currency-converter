@@ -1,0 +1,152 @@
+:root {
+    --header-bg-color: #1F85D7;
+    --convert-result-color: #6CB2D2;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    background-color: var(--header-bg-color);
+    padding: 15px 25px;
+    box-sizing: border-box;
+}
+
+header > ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+li.tab-label a{
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 30px;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.tab {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tab-title {
+    text-align: center;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+#about {
+    display: none;
+}
+
+#converter {
+    margin-top: 50px;
+}
+
+#converter input, #converter select {
+    padding: 3px;
+    box-sizing: content-box;
+}
+
+#from, #to {
+    width: 60px;
+    margin-right: 10px;
+}
+
+#converter-input {
+    width: 150px;
+    margin-right: 10px;
+}
+
+#converter-result {
+    color: var(--convert-result-color);
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#convert-btn {
+    height: 25px;
+    box-sizing: border-box; 
+    background-color: #fff;
+    border: 2.5px solid #222;
+    letter-spacing: 1px;
+    font-size: 12px;
+    margin-left: 30px;
+    width: 80px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#convert-btn:hover {
+    box-shadow: 3px 5px 10px 0.5px var(--convert-result-color);
+}
+
+#error {
+    padding: 30px;
+    text-align: center;
+    display: none;
+}
+
+#history {
+    margin-top: 20px;
+    height: 500px;
+    overflow-y: auto;
+}
+
+
+@media only screen and (max-width: 585px) {
+    li.tab-label a {
+        margin-right: 10px;
+        font-size: 18px;
+    }
+
+    #converter {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #converter input, #converter select {
+        margin-bottom: 20px;
+    }
+    #convert-btn {
+        margin-left: 0;
+    }
+
+    #converter-result {
+        font-size: 18px;
+    }
+
+    .tab h1 {
+        font-size: 26px;
+    }
+
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li class="tab-label"><a href="#converter-tab">Currency Converter</a></li>
+            <li class="tab-label"><a href="#about">About</a></li>
+        </ul>
+    </header>
+
+    <div id="main">
+        <div class="tab" id="converter-tab">
+            <h1 class="tab-title">Currency Converter</h1>
+            <div id="converter">
+                <input placeholder="Amount" type="number" id="converter-input">
+                <label for="from">From:</label>
+                <select id="from"></select>
+                <label for="to">To:</label>
+                <select id="to"></select>
+                <button id="convert-btn">Convert</button>
+                <span id="converter-result"></span>
+            </div>
+        </div>
+
+        <div class="tab" id="about">
+            <h1 class="tab-title">About</h1>
+            <div id="history"></div>
+        </div>
+    </div>
+    <div id="error">An error has occured, please try again later.</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
